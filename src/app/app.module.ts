@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

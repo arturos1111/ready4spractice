@@ -8,6 +8,10 @@ const ratesCarouselRoutes: Routes = [
     path: APP_ROUTES.path,
     component: RatesCarouselComponent,
   },
+  {
+    path: '**',
+    redirectTo: APP_ROUTES.error.path,
+  },
 ];
 
 @NgModule({
