@@ -22,6 +22,14 @@ const appRoutes: Routes = [
     },
   },
   {
+    path: APP_ROUTES.historical_data.path,
+    loadChildren: () => {
+      return import('./modules/historical-data/historical-data.module').then(
+        (module) => module.HistoricalDataModule
+      );
+    },
+  },
+  {
     path: APP_ROUTES.error.path,
     loadChildren: () => {
       return import('./shared/error/error.module').then(

@@ -6,6 +6,9 @@ export interface RouteModel {
   rates_carousel: {
     path: string;
   };
+  historical_data: {
+    path: string;
+  };
   error: {
     path: string;
   };
@@ -18,6 +21,9 @@ export const APP_ROUTES: RouteModel = {
   },
   rates_carousel: {
     path: 'rates-carousel',
+  },
+  historical_data: {
+    path: 'historical-data',
   },
   error: {
     path: 'error',
