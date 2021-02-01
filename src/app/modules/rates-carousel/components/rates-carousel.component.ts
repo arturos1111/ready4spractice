@@ -15,7 +15,7 @@ export interface CarouselItem {
   providers: [NgbCarouselConfig, CurrentRatesService],
 })
 export class RatesCarouselComponent implements OnInit, OnDestroy {
-  images = [1000, 1100, 1200].map((n) => `https://placekitten.com/g/${n}/500`);
+  images = [900, 990, 950].map((n) => `https://placekitten.com/g/${n}/500`);
   items: CarouselItem[] = [];
   private subsink: SubSink = new SubSink();
   private EUR_PLN: number = 0;
