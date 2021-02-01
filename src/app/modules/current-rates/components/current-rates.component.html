@@ -1,0 +1,8 @@
+<div class="container">
+  <section *ngIf="currentRate$ | async as currentRate">
+    <h1>
+      1 {{ currentRate.base }} =
+      <i>{{ currentRate.rates[currency] }} {{ currency }}</i>
+    </h1>
+  </section>
+</div>
