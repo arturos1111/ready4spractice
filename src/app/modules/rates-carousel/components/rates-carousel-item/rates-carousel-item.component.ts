@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselItem } from '../rates-carousel.component';
 
@@ -10,4 +10,8 @@ import { CarouselItem } from '../rates-carousel.component';
 })
 export class RatesCarouselItemComponent {
   @Input() items: CarouselItem[];
+  @Output() event = new EventEmitter<string>();
+  sendEvent(event) {
+    this.event.emit(event);
+  }
 }

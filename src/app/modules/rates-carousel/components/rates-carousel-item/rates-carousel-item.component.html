@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <ngb-carousel *ngIf="items">
+  <ngb-carousel *ngIf="items" (slide)="sendEvent($event)">
     <ng-template *ngFor="let item of items" ngbSlide>
       <div class="wrapper">
         <img [src]="item.img" alt="item.currency" />
