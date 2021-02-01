@@ -1,0 +1,16 @@
+.grid-container {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "navbar"
+    "main";
+}
+.navbar {
+  grid-area: navbar;
+}
+
+.router-outlet {
+  grid-area: main;
+}

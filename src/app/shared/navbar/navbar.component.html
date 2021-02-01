@@ -4,11 +4,16 @@
     href="https://github.com/arturos1111/ready4spractice"
     target="_blank"
   >
-    <img width="60" alt="Angular Logo" src="{{ images + 'github-logo.png' }}" />
+    <img width="60" alt="github-logo" src="{{ images + 'github-logo.png' }}" />
   </a>
-  <button title="Check curent rates" mat-raised-button>
-    Current exchange rates
-  </button>
-  <button mat-raised-button>Exchange rates carousel</button>
+  <a [routerLink]="[appRoutes.current_rates.path]" routerLinkActive="active">
+    <button title="Check curent rates" mat-raised-button>
+      Current exchange rates
+    </button>
+  </a>
+
+  <a [routerLink]="[appRoutes.rates_carousel.path]" routerLinkActive="active">
+    <button mat-raised-button>Exchange rates carousel</button>
+  </a>
   <div class="spacer"></div>
 </div>
