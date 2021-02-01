@@ -30,4 +30,17 @@ export class CurrencyRestService {
 
     return this.http.get<CurrencyRates>(this.historicalApiUrl, { params });
   }
+
+  getCurrentExchangeRatesByCurrencies(
+    currency1: string,
+    currency2?: string
+  ): Observable<CurrencyRates> {
+    let params = new HttpParams();
+    if (currency1 === 'PLN') {
+      params = params.append('symbols', `${currency1}`);
+    } else {
+      params = params.append('symbols', `${currency1},${currency2}`);
+    }
+    return this.http.get<CurrencyRates>(this.currentApiUrl, { params });
+  }
 }

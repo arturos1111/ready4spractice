@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <ngb-carousel *ngIf="items">
+    <ng-template *ngFor="let item of items" ngbSlide>
+      <div class="wrapper">
+        <img [src]="item.img" alt="item.currency" />
+      </div>
+      <div class="carousel-caption">
+        <h3>{{ item.currency }}</h3>
+        <h1>{{ item.currencyRate }}</h1>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

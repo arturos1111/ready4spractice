@@ -14,6 +14,16 @@ export class CurrentRatesService {
     );
   }
 
+  getRatesByCurrencies(
+    currency1: string,
+    currency2?: string
+  ): Observable<CurrencyRates> {
+    return this.currencyRestService.getCurrentExchangeRatesByCurrencies(
+      currency1,
+      currency2
+    );
+  }
+
   getHistoricalRates(
     startsAt: string,
     endsAt: string,
