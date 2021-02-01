@@ -32,6 +32,10 @@ export class HistoricalDataComponent implements OnInit, OnDestroy {
   private pipeTemplate: string = 'YYYY-MM-dd';
   private outputCurrency: string = 'EUR';
 
+  colorScheme = {
+    domain: ['#08DDC1', '#FFDC1B', '#FF5E3A'],
+  };
+
   data: RootGraph[] = [];
 
   constructor(
