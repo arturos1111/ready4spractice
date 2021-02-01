@@ -26,7 +26,8 @@
     "@ngmodule/material-carousel": "^0.6.0",
     "@swimlane/ngx-charts": "^17.0.0",
     "bootstrap": "^4.6.0",
-    "rxjs": "~6.6.0",
+    "lodash": "^4.17.20",
+    "rxjs": "^6.6.3",
     "subsink": "^1.0.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

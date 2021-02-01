@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CurrencyRates } from 'src/app/core/services/http/currency-service/interfaces/currency';
-import { CurrentRatesService } from '../services/current-rates.service';
+import { CurrentRatesService } from '../../../core/services/currency-rates.service';
 
 @Component({
   selector: 'app-current-rates',
