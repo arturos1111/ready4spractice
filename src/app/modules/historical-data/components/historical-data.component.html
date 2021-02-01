@@ -2,8 +2,14 @@
   <ngx-charts-line-chart
     [results]="data"
     [xAxis]="true"
+    [yAxis]="true"
+    [yAxisLabel]="xLabel"
+    [xAxisLabel]="yLabel"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
     [scheme]="colorScheme"
     [showGridLines]="false"
+    [view]="chartSize"
   >
   </ngx-charts-line-chart>
 </div>

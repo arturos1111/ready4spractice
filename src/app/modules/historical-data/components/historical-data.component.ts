@@ -26,17 +26,19 @@ export interface RootObject {
   providers: [CurrentRatesService, DatePipe],
 })
 export class HistoricalDataComponent implements OnInit, OnDestroy {
+  chartSize = [900, 600];
+  colorScheme = {
+    domain: ['#08DDC1'],
+  };
+  data: RootGraph[] = [];
+  xLabel: string = 'Rate PLN/EUR';
+  yLabel: string = 'Exchange rate from 01-01-2010 till today';
+
   private subsink: SubSink = new SubSink();
   private startAt: Date = new Date('2011-01-01');
   private endAt: Date = new Date();
   private pipeTemplate: string = 'YYYY-MM-dd';
   private outputCurrency: string = 'EUR';
-
-  colorScheme = {
-    domain: ['#08DDC1', '#FFDC1B', '#FF5E3A'],
-  };
-
-  data: RootGraph[] = [];
 
   constructor(
     private currentRatesService: CurrentRatesService,
